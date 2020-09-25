@@ -1,0 +1,96 @@
+@font-face {
+    font-family: fiati;
+    src: url(../assets/fiati-regular.woff);
+}
+
+$color-hover: rgb(235, 118, 23);
+
+.glyphs-container {
+    width: 65vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#inst-select {
+    font-size: 1.5em;
+    margin: 20px 10px;
+}
+
+.glyph-item {
+    font-size: 0.8em;
+    display: inline-block;
+    margin: 2px;
+    padding: 5px 5px;
+    border: 1px solid #ccc;
+    opacity: 0.65;
+
+    &.active {
+        border: 2px solid rgb(52, 127, 197);
+        opacity: 1;
+    }
+
+    &:hover {
+        background-color: $color-hover;
+    }
+
+    &.base {
+        background-color: rgb(210, 232, 235);
+        color: rgb(38, 72, 77);
+        font-size: 1em;
+    }
+    &.low {
+        background-color: #fff;
+        font-size: 0.9em;
+        color: #777;
+    }
+    &.tertiary {
+        background-color: #eee;
+        font-size: 0.9em;
+        color: #555;
+    }
+    &.secondary {
+        background-color: #ddd;
+        font-size: 1.05em;
+        color: #333;
+    }
+    &.primary {
+        background-color: #ccc;
+        font-size: 1.1em;
+        font-weight: 600;
+    }
+}
+
+$diagram-size: 300px;
+
+.diagrams-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 200px;
+    height: $diagram-size * 1.2;
+    font-size: $diagram-size;
+    font-family: fiati;
+    padding-top: 20px;
+    border: 1px solid #ccc;
+}
+
+.diagram {
+    position: absolute;
+    top: -$diagram-size + 20px;
+    left: 10px;
+    color: #009;
+    &.base {
+        color: #999;
+    }
+}
+
+.hover {
+    color: $color-hover;
+}
+
+.string-box {
+    position: fixed;
+    top: $diagram-size + 100px;
+    right: 20px;
+    font-size: 1.2em;
+}
